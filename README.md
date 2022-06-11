@@ -10,6 +10,9 @@ An algorithmic detail is that that signer's public key is invloved in the determ
 
 That said, public apis should NOT allow a decoupled private/public key-pair as signing input. To circumvent that, many implementations store the public key along with the private key (or seed) and consider the whole keypair as the secret OR they always re-derive the public key inside the signing function. Unfortunately, a large number of existing libraries fail to address this issue by allowing arbitrary public keys as inputs without checking if the input public key corresponds to the input private key. Here, we enlist some of this libraries along with the related code-reference.
 
+![Ed25519 api misuse resulting to key extraction](dalek_api_misuse.jpg?raw=true "Ed25519 api misuse resulting to key extraction")
+An example api misuse in the ed25519-dalek Rust crate.
+
 ## Affected libraries
 * ASM/C: iroha-ed25519 (Hyperledger Project) <br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
