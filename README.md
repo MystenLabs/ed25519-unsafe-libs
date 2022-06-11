@@ -8,14 +8,12 @@ Note that normally and according to the related [rfc8032](https://datatracker.ie
 
 An algorithmic detail is that that signer's public key is invloved in the deterministic computation of the `S` part of the signature only, but not in the `R` value. The latter implies that if an adversary could somehow use the signing function as an Oracle (that expects arbitrary public keys as inputs), then it is possible that for the same message one can get two signatures sharing the same `R` and only differ on the `S` part. Unfortunately, when this happens, one can easily extract the private key. 
 
-That said, public apis should NOT allow a decoupled private/public key-pair as signing input. To circumvent that, many implementations store the public key along with the private key (or seed) and consider the whole keypair as the secret OR they always re-derive the public key inside the signing function. Unfortunately, a large number of existing libraries fail to address this issue by allowing arbitrary public keys as inputs without checking if the input public key corresponds to the input private key. Here, we enlist some of this libraries along with a code-reference in the .
+That said, public apis should NOT allow a decoupled private/public key-pair as signing input. To circumvent that, many implementations store the public key along with the private key (or seed) and consider the whole keypair as the secret OR they always re-derive the public key inside the signing function. Unfortunately, a large number of existing libraries fail to address this issue by allowing arbitrary public keys as inputs without checking if the input public key corresponds to the input private key. Here, we enlist some of this libraries along with the related code-reference.
 
 ## Affected libraries
 * ASM/C: iroha-ed25519 (Hyperledger Project) <br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
-<br />
 and
-<br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/amd64-64-24k-pic/ed25519.c#L30](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/amd64-64-24k-pic/ed25519.c#L30)
 
 * C: ed25519-donna (Andrew Moon) <br />
@@ -72,8 +70,7 @@ and
 
 * Python: ed25519 (Python Cryptographic Authority) <br />
 [https://github.com/pyca/ed25519/blob/main/ed25519.py#L243](https://github.com/pyca/ed25519/blob/main/ed25519.py#L243)
-<br />
-*authors mention it’s unsafe against side channels anyway*
+(*authors mention it’s unsafe against side channels anyway*)
 
 * Python: python-pure25519 (Brian Warner) <br />
 [https://github.com/warner/python-pure25519/blob/master/pure25519/eddsa.py#L21](https://github.com/warner/python-pure25519/blob/master/pure25519/eddsa.py#L21)
