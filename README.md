@@ -12,7 +12,7 @@ That said, public apis should NOT allow a decoupled private/public key-pair as s
 
 *Of course, this does not mean that all applications with dependencies to these libraries are prone to key exposure attacks; actually, most are probably safe due to usually not publicly exposing the affected api to their users. On the other hand, even when these apis are not exposed, there are applications with different TCB threat model strategies on how the private and public keys are managed and stored. That said, to prevent this attack, developers should also enforce an integrity protection protocol for the public keys as well.*
 
-Here, we enlist some of these libraries along with the related code-reference.
+Here, we enlist some of the affected libraries along with the related code-references.
 
 ![Ed25519 api misuse resulting to key extraction](dalek_api_misuse.jpg?raw=true "Ed25519 api misuse resulting to key extraction")
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
