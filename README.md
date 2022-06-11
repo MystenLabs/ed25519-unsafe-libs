@@ -1,5 +1,5 @@
 # ed25519-unsafe-libs
-List of unsafe ed25519 signature libraries that allow a public api where secret and public key can be provided independently as signing function inputs. Misuse of this api by can result to private key exposure.
+List of unsafe ed25519 signature libraries that allow a public api where secret and public key can be provided independently as signing function inputs. Misuse of this apis can result to private key exposure.
 
 All of the libraries in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
