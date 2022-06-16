@@ -18,10 +18,13 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-Number of impacted libs: 27 (last updated: June 13 2022)
+Number of impacted libs: 29 (last updated: June 15 2022)
 
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
+
+* Java: ed25519-elisabeth (Jack Grigg) <br />
+[https://github.com/cryptography-cafe/ed25519-elisabeth/blob/master/src/main/java/cafe/cryptography/ed25519/Ed25519ExpandedPrivateKey.java#L60](https://github.com/cryptography-cafe/ed25519-elisabeth/blob/master/src/main/java/cafe/cryptography/ed25519/Ed25519ExpandedPrivateKey.java#L60)
 
 * ASM/C: iroha-ed25519 (Hyperledger Project) <br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
@@ -107,3 +110,6 @@ and
 
 * C: horse25519 (Yawning Angel) <br />
 [https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7)
+
+* JS: supercop.js (1p6 Flynx) <br />
+[https://github.com/1p6/supercop.js/blob/master/index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
