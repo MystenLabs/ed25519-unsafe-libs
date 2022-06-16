@@ -96,11 +96,14 @@ and
 * Rust: ed25519-dalek (Isis Agora Lovecruft) <br />
 [https://github.com/dalek-cryptography/ed25519-dalek/blob/main/src/secret.rs#L399](https://github.com/dalek-cryptography/ed25519-dalek/blob/main/src/secret.rs#L399)
 
-* Python bindings for ed25519-dalek: py-ed25519-bindings <br />
+* Python: bindings for ed25519-dalek: py-ed25519-bindings <br />
 [https://github.com/polkascan/py-ed25519-bindings/blob/master/src/lib.rs#L111](https://github.com/polkascan/py-ed25519-bindings/blob/master/src/lib.rs#L111)
 
 * Swift: ed25519swift (pebble8888) <br />
 [https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120](https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120)
 
-* threshold-ed25519 — Threshold Signatures using Ed25519 <br />
+* Go: threshold-ed25519 — Threshold Signatures using Ed25519 <br />
 [https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161)
+
+* C: horse25519 (Yawning Angel) <br />
+[https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7)
