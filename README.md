@@ -18,7 +18,7 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-Number of impacted libs: 33 (last updated: June 15 2022)
+Number of impacted libs: 35 (last updated: June 15 2022)
 
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
@@ -122,3 +122,9 @@ and
 
 * C#: SommerEngineering/Ed25519 (Thorsten Sommer) <br />
 [https://github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80](https://github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80)
+
+* CUDA: ChorusOne/solanity <br />
+[https://github.com/ChorusOne/solanity/blob/master/src/cuda-ecc-ed25519/sign.cu#L10](https://github.com/ChorusOne/solanity/blob/master/src/cuda-ecc-ed25519/sign.cu#L10)
+
+* C: ncme/c25519 (Daniel Beer and Nikolas Rösener) <br />
+[https://github.com/ncme/c25519/blob/master/src/edsign.c#L115](https://github.com/ncme/c25519/blob/master/src/edsign.c#L115)
