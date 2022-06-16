@@ -18,7 +18,7 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-Number of impacted libs: 29 (last updated: June 15 2022)
+Number of impacted libs: 33 (last updated: June 15 2022)
 
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
@@ -113,3 +113,12 @@ and
 
 * JS: supercop.js (1p6 Flynx) <br />
 [https://github.com/1p6/supercop.js/blob/master/index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
+
+* JS: substack/ed25519-supercop (James Halliday) <br />
+[https://github.com/substack/ed25519-supercop/blob/master/index.js#L3](https://github.com/substack/ed25519-supercop/blob/master/index.js#L3)
+
+* C: libeddsa (Philipp Lay) <br />
+[https://github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85](https://github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85)
+
+* C#: SommerEngineering/Ed25519 (Thorsten Sommer) <br />
+[https://github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80](https://github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80)
