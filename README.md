@@ -1,5 +1,5 @@
 # ed25519-unsafe-libs
-List of unsafe ed25519 signature libraries that allow a public api where secret and public key can be provided independently as signing function inputs. Misuse of these public apis can result to private key exposure.
+List of potentially unsafe ed25519 signature libraries that allow a public api where secret and public key can be provided independently as signing function inputs. Misuse of these public apis can result to private key exposure.
 
 All of the libraries in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
@@ -10,7 +10,7 @@ An algorithmic detail is that that signer's public key is invloved in the determ
 
 That said, public apis should NOT allow a decoupled private/public key-pair as signing input. To circumvent that, many implementations store the public key along with the private key (or seed) and consider the whole keypair as the secret OR they always re-derive the public key inside the signing function. Unfortunately, a large number of existing libraries fail to address this issue by allowing arbitrary public keys as inputs without checking if the input public key corresponds to the input private key.
 
-*Of course, this does not mean that all applications with dependencies to these libraries are prone to key exposure attacks; actually, most are probably safe due to usually not publicly exposing the affected api to their users. On the other hand, even when these apis are not exposed, there are applications with different TCB threat model strategies on how the private and public keys are managed and stored. That said, to prevent this attack, developers should also enforce an integrity protection protocol for the public keys as well.*
+*Of course, this does not mean that all applications with dependencies to these libraries are prone to key exposure attacks; actually, most are probably safe due to usually not publicly exposing the affected api to their users and coupling their pub/priv key pair just before the `sign` invocation. On the other hand, even when these apis are not exposed, there are applications with different TCB threat model strategies on how the private and public keys are managed and stored. That said, to prevent this attack, developers should also enforce an integrity protection protocol for the public keys as well.*
 
 Here, we enlist some of the affected libraries along with the related code-references.
 
