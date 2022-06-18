@@ -18,7 +18,7 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-Number of impacted libs: 36 (last updated: June 17 2022)
+Number of impacted libs: 37 (last updated: June 17 2022)
 
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
@@ -131,3 +131,6 @@ and
 
 * C: luazen (Phil Leblanc) <br />
 [https://github.com/philanc/luazen/blob/master/src/x25519.c#L508](https://github.com/philanc/luazen/blob/master/src/x25519.c#L508) (*authors modified the function to accept pk instead of the original nacl 64-byte sk which includes pk as the last 32 bytes*)
+
+* C++: amber (Pelayo Bernedo) <br />
+[https://github.com/bernedogit/amber/blob/master/src/group25519.cpp#L1661](https://github.com/bernedogit/amber/blob/master/src/group25519.cpp#L1661)
