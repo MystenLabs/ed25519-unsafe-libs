@@ -18,7 +18,7 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-Number of impacted libs: 39 (last updated: June 17 2022)
+Number of impacted libs: 40 (last updated: June 17 2022)
 
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
@@ -140,3 +140,6 @@ and
 
 * Elixir: mwmiller/ed25519_ex (Matt Miller) <br />
 [https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146](https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146)(*Public key is optional. Per author's comment: if only the secret key is provided, the public key will be derived therefrom. This adds significant overhead*)
+
+* PHP (C wrapper): php-ed25519-ext <br />
+[https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93](https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93)
