@@ -20,7 +20,6 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-Number of impacted libs: 40 (last updated: June 17 2022)
 
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
