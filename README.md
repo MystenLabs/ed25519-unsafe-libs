@@ -26,9 +26,6 @@ Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
 
-* Java: ed25519-elisabeth (Jack Grigg) <br />
-[https://github.com/cryptography-cafe/ed25519-elisabeth/blob/master/src/main/java/cafe/cryptography/ed25519/Ed25519ExpandedPrivateKey.java#L60](https://github.com/cryptography-cafe/ed25519-elisabeth/blob/master/src/main/java/cafe/cryptography/ed25519/Ed25519ExpandedPrivateKey.java#L60)
-
 * ASM/C: iroha-ed25519 (Hyperledger Project) <br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
 and
