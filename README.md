@@ -3,8 +3,8 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 39
-Number of libraries that fixed the issue after the announcement: 1
+Number of impacted libraries: 39 <br />
+Number of libraries that fixed the issue after the announcement: 1 <br />
 *last updated: June 21 2022*
 
 ## What is the issue?
@@ -146,5 +146,4 @@ and
 
 ## Fixed libraries
 * Java: ed25519-elisabeth (Jack Grigg) <br />
-[https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac)
-*(Fix merged on June 19, 2022)*
+[https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac) *(Fix merged on June 19, 2022)*
