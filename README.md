@@ -3,7 +3,9 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 40 (last updated: June 17 2022)
+Number of impacted libraries: 39
+Number of libraries that fixed the issue after the announcement: 1
+*last updated: June 21 2022*
 
 ## What is the issue?
 Note that normally and according to the related [rfc8032](https://datatracker.ietf.org/doc/html/rfc8032), EdDSA signatures are deterministic, and thus for the same input message to be signed, a unique signature output that includes two elements, a curve point `R` and a scalar `S`, is returned. 
@@ -144,3 +146,8 @@ and
 
 * PHP (C wrapper): php-ed25519-ext <br />
 [https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93](https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93)
+
+## Fixed libraries
+* Java: ed25519-elisabeth (Jack Grigg) <br />
+[https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac)
+*(Fix merged on June 19, 2022)*
