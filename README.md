@@ -7,7 +7,7 @@ Number of impacted libraries: 38 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: June 28 2022*
 
-# Our attack in the news and social networks:
+## Our attack in the news and social networks:
 * [The Daily Swig](https://portswigger.net/daily-swig/dozens-of-cryptography-libraries-vulnerable-to-private-key-theft) *(June, 28 2022)*
 * [Risky Biz News](https://riskybiznews.substack.com/p/risky-biz-news-hackers-hit-iranian#%C2%A7vulnerabilities-and-bug-bounty) *(June, 28 2022)*
 * [SafeHeron blogpost](https://blog.safeheron.com/blog/safeheron-originals/analysis-on-ed25519-use-risks-your-wallet-private-key-can-be-stolen) *(June, 17 2022)*
