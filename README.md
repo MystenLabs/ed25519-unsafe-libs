@@ -18,7 +18,7 @@ Number of libraries that fixed the issue after the announcement: 2 <br />
     - [tweet 1](https://twitter.com/kostascrypto/status/1535579208960790528) (by Kostas Kryptos - "The original 26 vulnerable libs")
     - [tweet 2](https://twitter.com/kostascrypto/status/1538351278413058048) (by Kostas Kryptos - "Aftermath of the 40 vulnerable libs")
     - [tweet 3](https://twitter.com/campuscodi/status/1541927414648827905) (by Catalin Cimpanu - "40 cryptography libraries are impacted by same Ed25519 misimplementation")
-    - [tweet 4](https://twitter.com/kennyog/status/1538768590404452353) (by Kenny Patterson - "Potential for widespread EdDSA private key recovery, cf. [http://kopenpgp.com](http://kopenpgp.com) where same vector exploited in OpenPGP libs")
+    - [tweet 4](https://twitter.com/kennyog/status/1538768590404452353) (by Kenny Paterson - "Potential for widespread EdDSA private key recovery, cf. [http://kopenpgp.com](http://kopenpgp.com) where same vector exploited in OpenPGP libs")
     - [tweet 5](https://twitter.com/EllipticKiwi/status/1538632666571894784) (by Steven Galbraith - "A hazard for deterministic signatures: better check it is the correct public key!")
     - [tweet 6](https://twitter.com/riyazdf/status/1538352392164364288) - (by Riyaz Faizullabhoy - "If you’re using EdDSA in prod please take a look")
     - [tweet 7](https://twitter.com/bpreneel1/status/1542065725174587397) - (by Bart Preneel - "Reminder that implementing cryptographic algorithms securely and correctly is hard").
