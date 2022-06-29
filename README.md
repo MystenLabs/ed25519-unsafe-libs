@@ -3,9 +3,9 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 39 <br />
-Number of libraries that fixed the issue after the announcement: 1 <br />
-*last updated: June 21 2022*
+Number of impacted libraries: 38 <br />
+Number of libraries that fixed the issue after the announcement: 2 <br />
+*last updated: June 28 2022*
 
 ## What is the issue?
 Note that normally and according to the related [rfc8032](https://datatracker.ietf.org/doc/html/rfc8032), EdDSA signatures are deterministic, and thus for the same input message to be signed, a unique signature output that includes two elements, a curve point `R` and a scalar `S`, is returned. 
@@ -22,9 +22,6 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
-
-* C: Trezor firmware <br />
-[https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110](https://github.com/trezor/trezor-firmware/blob/master/crypto/ed25519-donna/ed25519.c#L110)
 
 * ASM/C: iroha-ed25519 (Hyperledger Project) <br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
@@ -145,5 +142,8 @@ and
 [https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93](https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93)
 
 ## Fixed libraries
+* C: Trezor firmware <br />
+[https://github.com/trezor/trezor-firmware/pull/2349](https://github.com/trezor/trezor-firmware/pull/2349) *(Fix merged on June 27, 2022)*
+
 * Java: ed25519-elisabeth (Jack Grigg) <br />
 [https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac) *(Fix merged on June 19, 2022)*
