@@ -7,6 +7,14 @@ Number of impacted libraries: 38 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: June 28 2022*
 
+# Our attack in the news and social networks:
+* [The Daily Swig](https://portswigger.net/daily-swig/dozens-of-cryptography-libraries-vulnerable-to-private-key-theft) *(June, 28 2022)*
+* [Risky Biz News](https://riskybiznews.substack.com/p/risky-biz-news-hackers-hit-iranian#%C2%A7vulnerabilities-and-bug-bounty) *(June, 28 2022)*
+* [SafeHeron blogpost](https://blog.safeheron.com/blog/safeheron-originals/analysis-on-ed25519-use-risks-your-wallet-private-key-can-be-stolen) *(June, 17 2022)*
+* [Reddit r/crypto](https://www.reddit.com/r/crypto/comments/vfl2se/initial_impact_report_about_this_weeks_eddsa/) *(best post of the month - June, 18 2022)*
+* [Reddit r/cryptography](https://www.reddit.com/r/cryptography/comments/vextlk/40_unsafe_ed25519_libs_where_private_key_can_be/) *(June, 17 2022)*
+* [Twitter 1](https://twitter.com/kostascrypto/status/1535579208960790528), [Twitter 2](https://twitter.com/kostascrypto/status/1538351278413058048), [Twitter 3](https://twitter.com/campuscodi/status/1541927414648827905), [Twitter 4](https://twitter.com/kennyog/status/1538768590404452353), [Twitter 5](https://twitter.com/EllipticKiwi/status/1538632666571894784), [Twitter 6](https://twitter.com/riyazdf/status/1538352392164364288).
+
 ## What is the issue?
 Note that normally and according to the related [rfc8032](https://datatracker.ietf.org/doc/html/rfc8032), EdDSA signatures are deterministic, and thus for the same input message to be signed, a unique signature output that includes two elements, a curve point `R` and a scalar `S`, is returned. 
 
