@@ -3,9 +3,9 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 38 <br />
+Number of impacted libraries: 39 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
-*last updated: June 28, 2022*
+*last updated: June 30, 2022*
 
 ## News and social network coverage of this attack
 * [The Daily Swig](https://portswigger.net/daily-swig/dozens-of-cryptography-libraries-vulnerable-to-private-key-theft) "Dozens of cryptography libraries vulnerable to private key theft" *(June 28, 2022)*
@@ -38,6 +38,9 @@ Here, we enlist some of the affected libraries along with the related code-refer
 Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 
 ## Affected libraries
+
+* C: GNU Nettle <br />
+[https://github.com/gnutls/nettle/blob/fe7ae87d1b837e82f7c7968b068bca7d853a4cec/ed25519-sha512-sign.c#L43](https://github.com/gnutls/nettle/blob/fe7ae87d1b837e82f7c7968b068bca7d853a4cec/ed25519-sha512-sign.c#L43)
 
 * ASM/C: iroha-ed25519 (Hyperledger Project) <br />
 [https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
