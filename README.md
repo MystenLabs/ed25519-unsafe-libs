@@ -7,6 +7,10 @@ Number of impacted libraries: 39 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: June 30, 2022*
 
+## Proof of Concept implementations that demonstrate this potential exploit:
+* Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
+* Python: [Ed25519 Vulnerabilty in Python](https://asecuritysite.com/eddsa/ed03), *Buchanan, William J (2022). Ed25519 Vulnerabilty in Python (Recovering Private Key). Asecuritysite.com.*
+
 ## News and social network coverage of this attack
 * [The Daily Swig](https://portswigger.net/daily-swig/dozens-of-cryptography-libraries-vulnerable-to-private-key-theft) "Dozens of cryptography libraries vulnerable to private key theft" *(June 28, 2022)*
 * [Risky Biz News](https://riskybiznews.substack.com/p/risky-biz-news-hackers-hit-iranian#%C2%A7vulnerabilities-and-bug-bounty) "New crypto vulnerability: Tens of cryptography libraries have misimplemented the Ed25519 digital signature algorithm" *(June 28, 2022)*
