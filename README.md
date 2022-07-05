@@ -5,7 +5,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Number of impacted libraries: 40 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
-*last updated: June 30, 2022*
+*last updated: July 5, 2022*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
