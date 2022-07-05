@@ -3,7 +3,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 39 <br />
+Number of impacted libraries: 40 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: June 30, 2022*
 
@@ -58,6 +58,9 @@ and
 
 * C: ed25519 (Orson Peters) <br />
 [https://github.com/orlp/ed25519/blob/master/src/sign.c#L7](https://github.com/orlp/ed25519/blob/master/src/sign.c#L7)
+
+* C: Monocypher (Loup Vaillant) <br />
+  [https://monocypher.org/manual/sign](https://monocypher.org/manual/sign)
 
 * C: libbrine (Kevin Smith) <br />
 [https://github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7](https://github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7)
