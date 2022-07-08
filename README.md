@@ -3,7 +3,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 42 <br />
+Number of impacted libraries: 43 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: July 8, 2022*
 
@@ -173,6 +173,9 @@ and
 
 * PHP (C wrapper): php-ed25519-ext <br />
 [https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93](https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93)
+
+* Nim: niv/ed25519.nim (Bernhard Stöckner) <br />
+[https://github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26](https://github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26)
 
 ## Fixed libraries
 * C: Trezor firmware <br />
