@@ -3,9 +3,9 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 41 <br />
+Number of impacted libraries: 42 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
-*last updated: July 5, 2022*
+*last updated: July 8, 2022*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
@@ -87,8 +87,7 @@ and
 [https://github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168](https://github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168)
 
 * Elixir: ed25519_ex (Matt Miller) <br />
-[https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146](https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146
-)
+[https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146](https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146)
 
 * Haskell: hs-scraps (Vincent Hanquez) <br />
 [https://github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115](https://github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115)
@@ -104,6 +103,9 @@ and
 
 * Java: ED25519 (Mick Michalski) <br />
 [https://github.com/michami/ED25519/blob/master/ED25519.java#L60](https://github.com/michami/ED25519/blob/master/ED25519.java#L60)
+
+* Java: vRallev/ECC-25519 (Ralf Wondratschek) <br />
+[https://github.com/vRallev/ECC-25519/blob/master/ECC-25519-Java/src/main/java/net/vrallev/java/ecc/Ecc25519Helper.java#L102](https://github.com/vRallev/ECC-25519/blob/master/ECC-25519-Java/src/main/java/net/vrallev/java/ecc/Ecc25519Helper.java#L102)
 
 * Perl: Crypt::Ed25519 (Marc Lehmann) <br />
 [https://metacpan.org/release/MLEHMANN/Crypt-Ed25519-0.9/view/Ed25519.pm#$signature-=-Crypt::Ed25519::sign-$message,-$public_key,-$private_key](https://metacpan.org/release/MLEHMANN/Crypt-Ed25519-0.9/view/Ed25519.pm#$signature-=-Crypt::Ed25519::sign-$message,-$public_key,-$private_key)
