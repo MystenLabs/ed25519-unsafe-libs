@@ -177,6 +177,9 @@ and
 * Nim: niv/ed25519.nim (Bernhard Stöckner) <br />
 [https://github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26](https://github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26)
 
+* Typescript: mipher (Marco Paland) <br />
+[https://github.com/mpaland/mipher/blob/master/src/x25519.ts#L936](https://github.com/mpaland/mipher/blob/master/src/x25519.ts#L936)
+
 ## Fixed libraries
 * C: Trezor firmware <br />
 [https://github.com/trezor/trezor-firmware/pull/2349](https://github.com/trezor/trezor-firmware/pull/2349) *(Fix merged on June 27, 2022)*
