@@ -3,7 +3,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 46 <br />
+Number of impacted libraries: 47 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: July 18, 2022*
 
@@ -185,6 +185,9 @@ and
 
 * Crystal: monocypher.cr <br />
 [https://github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39](https://github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39)
+
+* Erlang: erlang-libdecaf <br />
+[https://github.com/potatosalad/erlang-libdecaf/blob/master/src/libdecaf_curve25519.erl#L106](https://github.com/potatosalad/erlang-libdecaf/blob/master/src/libdecaf_curve25519.erl#L106)
 
 ## Fixed libraries
 * C: Trezor firmware <br />
