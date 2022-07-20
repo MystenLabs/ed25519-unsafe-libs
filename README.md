@@ -190,10 +190,10 @@ and
 [https://github.com/potatosalad/erlang-libdecaf/blob/master/src/libdecaf_curve25519.erl#L106](https://github.com/potatosalad/erlang-libdecaf/blob/master/src/libdecaf_curve25519.erl#L106)
 
 * Python: py_ssh_keygen_ed25519 (Péter Szabó) <br />
-[https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128](https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128)(*Public key is optional.*)
+[https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128](https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128) (*Public key is optional*)
 
 * Javascript: KinomaJS <br />
-[https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92](https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92)
+[https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92](https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92) (*Public key is optional*)
 
 * Haskell: gen-ed25-keypair <br />
 [https://github.com/awakesecurity/gen-ed25-keypair](https://github.com/awakesecurity/gen-ed25-keypair)
