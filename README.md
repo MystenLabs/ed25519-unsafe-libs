@@ -3,7 +3,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 49 <br />
+Number of impacted libraries: 50 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: July 20, 2022*
 
@@ -194,6 +194,9 @@ and
 
 * Javascript: KinomaJS <br />
 [https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92](https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92)
+
+* Haskell: gen-ed25-keypair <br />
+[https://github.com/awakesecurity/gen-ed25-keypair](https://github.com/awakesecurity/gen-ed25-keypair)
 
 ## Fixed libraries
 * C: Trezor firmware <br />
