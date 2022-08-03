@@ -3,7 +3,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 50 <br />
+Number of impacted libraries: 51 <br />
 Number of libraries that fixed the issue after the announcement: 2 <br />
 *last updated: July 20, 2022*
 
@@ -146,6 +146,9 @@ and
 
 * JS: substack/ed25519-supercop (James Halliday) <br />
 [https://github.com/substack/ed25519-supercop/blob/master/index.js#L3](https://github.com/substack/ed25519-supercop/blob/master/index.js#L3)
+
+* JS: tweetnacl.js (Dmitry Chestnykh) <br />
+[https://github.com/dchest/tweetnacl-js/blob/6a9594a35a27f9c723c5f1c107e376d1c65c23b3/nacl.js#L757](https://github.com/dchest/tweetnacl-js/blob/6a9594a35a27f9c723c5f1c107e376d1c65c23b3/nacl.js#L757)
 
 * C: libeddsa (Philipp Lay) <br />
 [https://github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85](https://github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85)
