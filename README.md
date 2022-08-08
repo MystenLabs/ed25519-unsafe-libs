@@ -208,5 +208,5 @@ and
 * C: Harbour (Viktor Szakats) <br />
 [https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18](https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18) *(Fix merged on June 30, 2022)*
 
-* Rust/Wasm: polkadot/wasm <br />
+* Rust/Wasm: polkadot-js/wasm <br />
 [https://github.com/polkadot-js/wasm/pull/381/files](https://github.com/polkadot-js/wasm/pull/381/files) *(Fix merged on July 3, 2022)*
