@@ -4,7 +4,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
 Number of impacted libraries: 50 <br />
-Number of libraries that fixed the issue after the announcement: 3 <br />
+Number of libraries that fixed the issue after the announcement: 4 <br />
 *last updated: Aug 8, 2022*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
@@ -207,3 +207,6 @@ and
 
 * C: Harbour (Viktor Szakats) <br />
 [https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18](https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18) *(Fix merged on June 30, 2022)*
+
+* Rust/Wasm: polkadot/wasm <br />
+[https://github.com/polkadot-js/wasm/pull/381/files](https://github.com/polkadot-js/wasm/pull/381/files) *(Fix merged on July 3, 2022)*
