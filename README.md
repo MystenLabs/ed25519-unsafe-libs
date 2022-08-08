@@ -4,8 +4,8 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
 Number of impacted libraries: 50 <br />
-Number of libraries that fixed the issue after the announcement: 2 <br />
-*last updated: July 20, 2022*
+Number of libraries that fixed the issue after the announcement: 3 <br />
+*last updated: Aug 8, 2022*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
@@ -204,3 +204,6 @@ and
 
 * Java: ed25519-elisabeth (Jack Grigg) <br />
 [https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac) *(Fix merged on June 19, 2022)*
+
+* C: Harbour (Viktor Szakats) <br />
+[https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18](https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18) *(Fix merged on June 30, 2022)*
