@@ -138,9 +138,6 @@ and
 * Go: threshold-ed25519 — Threshold Signatures using Ed25519 <br />
 [https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161)
 
-* C: horse25519 (Yawning Angel) <br />
-[https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7)
-
 * JS: supercop.js (1p6 Flynx) <br />
 [https://github.com/1p6/supercop.js/blob/master/index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
 
@@ -197,6 +194,9 @@ and
 
 * Haskell: gen-ed25-keypair <br />
 [https://github.com/awakesecurity/gen-ed25-keypair](https://github.com/awakesecurity/gen-ed25-keypair)
+
+* C: horse25519 (Yawning Angel) <br />
+[https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7) *Note: This repo includes a copy of djb's ref10 ed25519 implementation lifted from supercop to avoid pulling in another dependency, but the intention is to provide a standalone executable that does ed25519 vanity keypair generation. While it does use the API in an odd way, this is intentional as it already is doing something extremely exotic and unusual with respect to key generation and the lib is not meant to be used for signing.*
 
 ## Fixed libraries
 * C: Trezor firmware <br />
