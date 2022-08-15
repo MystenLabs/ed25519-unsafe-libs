@@ -196,7 +196,7 @@ and
 [https://github.com/awakesecurity/gen-ed25-keypair](https://github.com/awakesecurity/gen-ed25-keypair)
 
 * C: horse25519 (Yawning Angel) <br />
-[https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7) *Note: This repo includes a copy of djb's ref10 ed25519 implementation lifted from supercop to avoid pulling in another dependency, but the intention is to provide a standalone executable that does ed25519 vanity keypair generation. While it does use the API in an odd way, this is intentional as it already is doing something extremely exotic and unusual with respect to key generation and the lib is not meant to be used for signing.*
+[https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7) *Note: This repo includes a copy of djb's ref10 ed25519 implementation lifted from supercop to avoid pulling in another dependency, but the intention is to provide a standalone executable that does ed25519 vanity keypair generation. While it does use the API in an odd way, this is intentional as it's already doing something extremely exotic and unusual with respect to key generation and the lib is not meant to be used for signing.*
 
 ## Fixed libraries
 * C: Trezor firmware <br />
