@@ -3,9 +3,9 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 50 <br />
-Number of libraries that fixed the issue after the announcement: 4 <br />
-*last updated: Aug 8, 2022*
+Number of impacted libraries: 49 <br />
+Number of libraries that fixed the issue after the announcement: 5 <br />
+*last updated: Aug 15, 2022*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
@@ -200,13 +200,16 @@ and
 
 ## Fixed libraries
 * C: Trezor firmware <br />
-[https://github.com/trezor/trezor-firmware/pull/2349](https://github.com/trezor/trezor-firmware/pull/2349) *(Fix merged on June 27, 2022)*
+Fixed in this PR: [https://github.com/trezor/trezor-firmware/pull/2349](https://github.com/trezor/trezor-firmware/pull/2349) *(Fix merged on June 27, 2022)*
 
 * Java: ed25519-elisabeth (Jack Grigg) <br />
-[https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac) *(Fix merged on June 19, 2022)*
+Fixed in this commit: [https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac](https://github.com/cryptography-cafe/ed25519-elisabeth/commit/49545ce47d550fed807522dff86546c812ccbbac) *(Fix merged on June 19, 2022)*
 
 * C: Harbour (Viktor Szakats) <br />
-[https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18](https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18) *(Fix merged on June 30, 2022)*
+Fixed in this commit: [https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18](https://github.com/vszakats/hb/commit/bae610b63d35c6c1793d94a3bf9467c3b1eded18) *(Fix merged on June 30, 2022)*
 
 * Rust/Wasm: polkadot-js/wasm <br />
-[https://github.com/polkadot-js/wasm/pull/381/files](https://github.com/polkadot-js/wasm/pull/381/files) *(Fix merged on July 3, 2022)*
+Fixed in this PR: [https://github.com/polkadot-js/wasm/pull/381/files](https://github.com/polkadot-js/wasm/pull/381/files) *(Fix merged on July 3, 2022)*
+
+* C: horse25519 (Yawning Angel) <br />
+Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](Fixed in https://github.com/Yawning/horse25519/pull/3) *(Fix merged on August 15, 2022)*
