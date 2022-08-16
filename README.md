@@ -212,4 +212,4 @@ Fixed in this commit: [https://github.com/vszakats/hb/commit/bae610b63d35c6c1793
 Fixed in this PR: [https://github.com/polkadot-js/wasm/pull/381/files](https://github.com/polkadot-js/wasm/pull/381/files) *(Fix merged on July 3, 2022)*
 
 * C: horse25519 (Yawning Angel) <br />
-Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](Fixed in https://github.com/Yawning/horse25519/pull/3) *(Fix merged on August 15, 2022)*
+Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](https://github.com/Yawning/horse25519/pull/3) *(Fix merged on August 15, 2022)*
