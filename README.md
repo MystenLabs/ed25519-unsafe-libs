@@ -183,9 +183,6 @@ and
 * Crystal: monocypher.cr <br />
 [https://github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39](https://github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39)
 
-* Erlang: erlang-libdecaf <br />
-[https://github.com/potatosalad/erlang-libdecaf/blob/master/src/libdecaf_curve25519.erl#L106](https://github.com/potatosalad/erlang-libdecaf/blob/master/src/libdecaf_curve25519.erl#L106)
-
 * Python: py_ssh_keygen_ed25519 (Péter Szabó) <br />
 [https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128](https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128) (*Public key is optional*)
 
@@ -213,3 +210,6 @@ Fixed in this PR: [https://github.com/polkadot-js/wasm/pull/381/files](https://g
 
 * C: horse25519 (Yawning Angel) <br />
 Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](https://github.com/Yawning/horse25519/pull/3) *(Fix merged on August 15, 2022)*
+
+* Erlang: erlang-libdecaf <br />
+Fixed in this commit: [https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713](https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713). Logic addressed in this issue: [ed25519-unsafe-libs/issues/7](https://github.com/MystenLabs/ed25519-unsafe-libs/issues/7) *(Fix merged on August 28, 2022)*
