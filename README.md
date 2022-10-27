@@ -135,8 +135,9 @@ and
 * Swift: ed25519swift (pebble8888) <br />
 [https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120](https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120)
 
-* Go: threshold-ed25519 — Threshold Signatures using Ed25519 <br />
+* Go: ~~threshold-ed25519 — Threshold Signatures using Ed25519~~ <br />
 [https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161)
+<br /> EDIT: This is not the case. Not now and not before. Since this implementation is a **Robust Threshold Signatures** scheme there is no leakage. ([Hindsight Crypto](https://github.com/nitronit)) 
 
 * JS: supercop.js (1p6 Flynx) <br />
 [https://github.com/1p6/supercop.js/blob/master/index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
