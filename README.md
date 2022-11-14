@@ -135,10 +135,6 @@ and
 * Swift: ed25519swift (pebble8888) <br />
 [https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120](https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120)
 
-* Go: ~~threshold-ed25519 — Threshold Signatures using Ed25519~~ <br />
-[https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161)
-<br /> EDIT: This is not the case. Not now and not before. Since this implementation is a **Robust Threshold Signatures** scheme there is no leakage. ([Hindsight Crypto](https://github.com/nitronit)) 
-
 * JS: supercop.js (1p6 Flynx) <br />
 [https://github.com/1p6/supercop.js/blob/master/index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
 
@@ -214,3 +210,9 @@ Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](https://github.
 
 * Erlang: erlang-libdecaf <br />
 Fixed in this commit: [https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713](https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713). Logic addressed in this issue: [ed25519-unsafe-libs/issues/7](https://github.com/MystenLabs/ed25519-unsafe-libs/issues/7) *(Fix merged on August 28, 2022)*
+
+## False Positives
+Libraries originally reported as vulnerable but they are not based on community feedback.
+
+* Go: threshold-ed25519 — Threshold Signatures using Ed25519 <br />
+[https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161) -> see report [https://github.com/MystenLabs/ed25519-unsafe-libs/pull/9](https://github.com/MystenLabs/ed25519-unsafe-libs/pull/9) *(reported on Oct 27, 2022 by nitronit)*
