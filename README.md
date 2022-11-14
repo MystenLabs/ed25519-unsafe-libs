@@ -211,8 +211,8 @@ Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](https://github.
 * Erlang: erlang-libdecaf <br />
 Fixed in this commit: [https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713](https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713). Logic addressed in this issue: [ed25519-unsafe-libs/issues/7](https://github.com/MystenLabs/ed25519-unsafe-libs/issues/7) *(Fix merged on August 28, 2022)*
 
-## False Positives
-Libraries originally reported as vulnerable but they are not based on community feedback.
+## False Positives (probably safe)
+Libraries originally reported as vulnerable, but removed from the list based on community feedback.
 
 * Go: threshold-ed25519 — Threshold Signatures using Ed25519 <br />
 [https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161) -> see report [https://github.com/MystenLabs/ed25519-unsafe-libs/pull/9](https://github.com/MystenLabs/ed25519-unsafe-libs/pull/9) *(reported on Oct 27, 2022 by nitronit)*
