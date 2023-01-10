@@ -9,7 +9,7 @@ Number of libraries that fixed the issue after the announcement: 6 <br />
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
-* Python: [Ed25519 Vulnerabilty in Python](https://asecuritysite.com/eddsa/ed03), *Buchanan, William J (2022). Ed25519 Vulnerabilty in Python (Recovering Private Key). Asecuritysite.com.*
+* Python: [Ed25519 Vulnerability in Python](https://asecuritysite.com/eddsa/ed03), *Buchanan, William J (2022). Ed25519 Vulnerability in Python (Recovering Private Key). Asecuritysite.com.*
 
 ## News and social network coverage of this attack
 * [The Daily Swig](https://portswigger.net/daily-swig/dozens-of-cryptography-libraries-vulnerable-to-private-key-theft) "Dozens of cryptography libraries vulnerable to private key theft" *(June 28, 2022)*
@@ -32,7 +32,7 @@ Number of libraries that fixed the issue after the announcement: 6 <br />
 ## What is the issue?
 Note that normally and according to the related [rfc8032](https://datatracker.ietf.org/doc/html/rfc8032), EdDSA signatures are deterministic, and thus for the same input message to be signed, a unique signature output that includes two elements, a curve point `R` and a scalar `S`, is returned. 
 
-An algorithmic detail is that that signer's public key is invloved in the deterministic computation of the `S` part of the signature only, but not in the `R` value. The latter implies that if an adversary could somehow use the signing function as an Oracle (that expects arbitrary public keys as inputs), then it is possible that for the same message one can get two signatures sharing the same `R` and only differ on the `S` part. Unfortunately, when this happens, one can easily extract the private key; this [StackOverflow post](https://crypto.stackexchange.com/questions/13129) post explains why this is feasible.
+An algorithmic detail is that that signer's public key is involved in the deterministic computation of the `S` part of the signature only, but not in the `R` value. The latter implies that if an adversary could somehow use the signing function as an Oracle (that expects arbitrary public keys as inputs), then it is possible that for the same message one can get two signatures sharing the same `R` and only differ on the `S` part. Unfortunately, when this happens, one can easily extract the private key; this [StackOverflow post](https://crypto.stackexchange.com/questions/13129) post explains why this is feasible.
 
 That said, public apis should NOT allow a decoupled private/public key-pair as signing input. To circumvent that, many implementations store the public key along with the private key (or seed) and consider the whole keypair as the secret OR they always re-derive the public key inside the signing function. Unfortunately, a large number of existing libraries fail to address this issue by allowing arbitrary public keys as inputs without checking if the input public key corresponds to the input private key.
 
