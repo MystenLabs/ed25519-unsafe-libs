@@ -12,7 +12,7 @@ Number of libraries that fixed the issue after the announcement: 7 <br />
 * Python: [Ed25519 Vulnerability in Python](https://asecuritysite.com/eddsa/ed03), *Buchanan, William J (2022). Ed25519 Vulnerability in Python (Recovering Private Key). Asecuritysite.com.*
 
 ## Talks:
-* Invited talk to USA's National Institute of Standards and Technology (NIST) Crypto Reading Club: [slides - Taming the Many EdDSAs](https://csrc.nist.gov/csrc/media/Presentations/2023/crclub-2023-03-08/images-media/20230308-crypto-club-slides--taming-the-many-EdDSAs.pdf), *Konstantinos Chalkias, François Garillot, Valeria Nikolaenco (2023). Taming the Many EdDSAs & Ed25519 Signing Attacks.*
+* Invited talk to USA's National Institute of Standards and Technology (NIST) Crypto Reading Club: [slides - Taming the Many EdDSAs](https://csrc.nist.gov/csrc/media/Presentations/2023/crclub-2023-03-08/images-media/20230308-crypto-club-slides--taming-the-many-EdDSAs.pdf) (pages 28-39), *Konstantinos Chalkias, François Garillot, Valeria Nikolaenco (2023). Taming the Many EdDSAs & Ed25519 Signing Attacks.*
 
 ## News and social network coverage of this attack
 * [NIST Crypto Reading Club](https://csrc.nist.gov/presentations/2023/crclub-2023-03-08) "Taming the Many EdDSAs" *(March 08, 2023)*
