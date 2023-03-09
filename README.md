@@ -11,7 +11,11 @@ Number of libraries that fixed the issue after the announcement: 7 <br />
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
 * Python: [Ed25519 Vulnerability in Python](https://asecuritysite.com/eddsa/ed03), *Buchanan, William J (2022). Ed25519 Vulnerability in Python (Recovering Private Key). Asecuritysite.com.*
 
+## Talks:
+* Invited talk to USA's National Institute of Standards and Technology (NIST) Crypto Reading Club: [slides - Taming the Many EdDSAs](https://csrc.nist.gov/csrc/media/Presentations/2023/crclub-2023-03-08/images-media/20230308-crypto-club-slides--taming-the-many-EdDSAs.pdf), *Konstantinos Chalkias, François Garillot, Valeria Nikolaenco (2023). Taming the Many EdDSAs & Ed25519 Signing Attacks.*
+
 ## News and social network coverage of this attack
+* [NIST Crypto Reading Club](https://csrc.nist.gov/presentations/2023/crclub-2023-03-08) "Taming the Many EdDSAs" *(March 08, 2023)*
 * [The Daily Swig](https://portswigger.net/daily-swig/dozens-of-cryptography-libraries-vulnerable-to-private-key-theft) "Dozens of cryptography libraries vulnerable to private key theft" *(June 28, 2022)*
 * [Risky Biz News](https://riskybiznews.substack.com/p/risky-biz-news-hackers-hit-iranian#%C2%A7vulnerabilities-and-bug-bounty) "New crypto vulnerability: Tens of cryptography libraries have misimplemented the Ed25519 digital signature algorithm" *(June 28, 2022)*
 * [SafeHeron blogpost](https://blog.safeheron.com/blog/safeheron-originals/analysis-on-ed25519-use-risks-your-wallet-private-key-can-be-stolen) "Analysis on Ed25519 Use Risks: Your Wallet Private Key Can Be Stolen" *(June 17, 2022)*
