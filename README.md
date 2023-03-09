@@ -3,7 +3,7 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 48 <br />
+Number of impacted libraries: 47 <br />
 Number of libraries that fixed the issue after the announcement: 6 <br />
 *last updated: Aug 28, 2022*
 
@@ -61,9 +61,6 @@ and
 
 * C: ed25519 (Orson Peters) <br />
 [https://github.com/orlp/ed25519/blob/master/src/sign.c#L7](https://github.com/orlp/ed25519/blob/master/src/sign.c#L7)
-
-* C: Monocypher (Loup Vaillant) <br />
-  [https://monocypher.org/manual/sign](https://monocypher.org/manual/sign)
 
 * C: libbrine (Kevin Smith) <br />
 [https://github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7](https://github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7)
@@ -210,6 +207,9 @@ Fixed in this PR: [https://github.com/Yawning/horse25519/pull/3](https://github.
 
 * Erlang: erlang-libdecaf <br />
 Fixed in this commit: [https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713](https://github.com/potatosalad/erlang-libdecaf/commit/16ba07ea122660e95f6cfa9107e28ed58bada713). Logic addressed in this issue: [ed25519-unsafe-libs/issues/7](https://github.com/MystenLabs/ed25519-unsafe-libs/issues/7) *(Fix merged on August 28, 2022)*
+
+* C: Monocypher (Loup Vaillant) <br />
+Fixed in this commit: [https://github.com/LoupVaillant/Monocypher/commit/da7b5407d20329f21a53ea993f516fb55e2f5e26](https://github.com/LoupVaillant/Monocypher/commit/da7b5407d20329f21a53ea993f516fb55e2f5e26) *(Fix merged on February 27, 2023)*
 
 ## False Positives (probably safe)
 Libraries originally reported as vulnerable, but removed from the list based on community feedback.
