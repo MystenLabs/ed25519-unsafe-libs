@@ -4,8 +4,8 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
 Number of impacted libraries: 47 <br />
-Number of libraries that fixed the issue after the announcement: 6 <br />
-*last updated: Aug 28, 2022*
+Number of libraries that fixed the issue after the announcement: 7 <br />
+*last updated: Mar 09, 2023*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
