@@ -3,9 +3,9 @@ List of potentially unsafe ed25519 signature libraries that allow a public api w
 
 Μost of the repositories in our analysis are enlisted in [IANIX :: Things that use Ed25519](https://ianix.com/pub/ed25519-deployment.html).
 
-Number of impacted libraries: 47 <br />
+Number of impacted libraries: 46 <br />
 Number of libraries that fixed the issue after the announcement: 7 <br />
-*last updated: Mar 09, 2023*
+*last updated: Mar 15, 2023*
 
 ## Proof of Concept implementations that demonstrate this potential exploit:
 * Rust: [ed25519-chalkias-exploit](https://github.com/MystenLabs/ed25519-unsafe-libs/tree/main/ed25519-chalkias-exploit)
@@ -86,9 +86,6 @@ and
 
 * Clojure: ed25519 (Kevin Downey) <br />
 [https://github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168](https://github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168)
-
-* Elixir: ed25519_ex (Matt Miller) <br />
-[https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146](https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146)
 
 * Haskell: hs-scraps (Vincent Hanquez) <br />
 [https://github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115](https://github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115)
