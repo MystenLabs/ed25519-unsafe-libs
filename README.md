@@ -32,6 +32,8 @@ Number of libraries that fixed the issue after the announcement: 7 <br />
     - [tweet 5](https://twitter.com/EllipticKiwi/status/1538632666571894784) (by Steven Galbraith - "A hazard for deterministic signatures: better check it is the correct public key!")
     - [tweet 6](https://twitter.com/riyazdf/status/1538352392164364288) (by Riyaz Faizullabhoy - "If you’re using EdDSA in prod please take a look")
     - [tweet 7](https://twitter.com/bpreneel1/status/1542065725174587397) (by Bart Preneel - "Reminder that implementing cryptographic algorithms securely and correctly is hard").
+* CTF (capture the flag) challenges that feature this attack:
+    - [ImaginaryCTF - JWT25519 (200pts)](https://imaginaryctf.org/ArchivedChallenges/30) *(June 30, 2022)*
 
 ## What is the issue?
 Note that normally and according to the related [rfc8032](https://datatracker.ietf.org/doc/html/rfc8032), EdDSA signatures are deterministic, and thus for the same input message to be signed, a unique signature output that includes two elements, a curve point `R` and a scalar `S`, is returned. 
