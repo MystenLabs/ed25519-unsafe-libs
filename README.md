@@ -54,60 +54,60 @@ Fig 1. An example api misuse in the ed25519-dalek Rust crate.
 ## Affected libraries
 
 * C
-    * OpenGNB [github.com/gnbdev/opengnb/blob/master/libs/ed25519/sign.c#L7](https://github.com/gnbdev/opengnb/blob/master/libs/ed25519/sign.c#L7)
-    * GNU Nettle [github.com/gnutls/nettle/blob/fe7ae87d1b837e82f7c7968b068bca7d853a4cec/ed25519-sha512-sign.c#L43](https://github.com/gnutls/nettle/blob/fe7ae87d1b837e82f7c7968b068bca7d853a4cec/ed25519-sha512-sign.c#L43)
-    * ed25519-donna (Andrew Moon) [github.com/floodyberry/ed25519-donna/blob/master/ed25519.c#L59](https://github.com/floodyberry/ed25519-donna/blob/master/ed25519.c#L59)
-    * ed25519 (Orson Peters) [github.com/orlp/ed25519/blob/master/src/sign.c#L7](https://github.com/orlp/ed25519/blob/master/src/sign.c#L7)
-    * libbrine (Kevin Smith) [github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7](https://github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7)
-    * iroha-ed25519 (includes ASM, Hyperledger Project) [github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
-      and [github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/amd64-64-24k-pic/ed25519.c#L30](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/amd64-64-24k-pic/ed25519.c#L30)
-    * libeddsa (Philipp Lay) [github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85](https://github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85)
-    * ncme/c25519 (Daniel Beer and Nikolas Rösener) [github.com/ncme/c25519/blob/master/src/edsign.c#L115](https://github.com/ncme/c25519/blob/master/src/edsign.c#L115)
-    * luazen (Phil Leblanc) [github.com/philanc/luazen/blob/master/src/x25519.c#L508](https://github.com/philanc/luazen/blob/master/src/x25519.c#L508) (*authors modified the function to accept pk instead of the original nacl 64-byte sk which includes pk as the last 32 bytes*)
-    * horse25519 (Yawning Angel) [github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7) *Note: This repo includes a copy of djb's ref10 ed25519 implementation lifted from supercop to avoid pulling in another dependency, but the intention is to provide a standalone executable that does ed25519 vanity keypair generation. While it does use the API in an odd way, this is intentional as it's already doing something extremely exotic and unusual with respect to key generation and the lib is not meant to be used for signing.*
-    * FLD ECC AVX2 (Armando Faz-Hern\'{a}ndez and Julio L\'{o}pez and Ricardo Dahab) [github.com/armfazh/fld-ecc-vec/blob/master/src/sign255.c#L391](https://github.com/armfazh/fld-ecc-vec/blob/master/src/sign255.c#L391)
+    * OpenGNB [libs/ed25519/sign.c#L7](https://github.com/gnbdev/opengnb/blob/master/libs/ed25519/sign.c#L7)
+    * GNU Nettle [ed25519-sha512-sign.c#L43](https://github.com/gnutls/nettle/blob/fe7ae87d1b837e82f7c7968b068bca7d853a4cec/ed25519-sha512-sign.c#L43)
+    * ed25519-donna (Andrew Moon) [ed25519.c#L59](https://github.com/floodyberry/ed25519-donna/blob/master/ed25519.c#L59)
+    * ed25519 (Orson Peters) [src/sign.c#L7](https://github.com/orlp/ed25519/blob/master/src/sign.c#L7)
+    * libbrine (Kevin Smith) [src/ed25519/sign.c#L7](https://github.com/kevsmith/libbrine/blob/master/src/ed25519/sign.c#L7)
+    * iroha-ed25519 (includes ASM, Hyperledger Project) [lib/ed25519/ref10/ed25519.c#L27](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/ref10/ed25519.c#L27)
+      and [lib/ed25519/amd64-64-24k-pic/ed25519.c#L30](https://github.com/hyperledger/iroha-ed25519/blob/main/lib/ed25519/amd64-64-24k-pic/ed25519.c#L30)
+    * libeddsa (Philipp Lay) [lib/ed25519-sha512.c#L85](https://github.com/phlay/libeddsa/blob/master/lib/ed25519-sha512.c#L85)
+    * ncme/c25519 (Daniel Beer and Nikolas Rösener) [src/edsign.c#L115](https://github.com/ncme/c25519/blob/master/src/edsign.c#L115)
+    * luazen (Phil Leblanc) [src/x25519.c#L508](https://github.com/philanc/luazen/blob/master/src/x25519.c#L508) (*authors modified the function to accept pk instead of the original nacl 64-byte sk which includes pk as the last 32 bytes*)
+    * horse25519 (Yawning Angel) [src/ref10/sign.c#L7](https://github.com/Yawning/horse25519/blob/master/src/ref10/sign.c#L7) *Note: This repo includes a copy of djb's ref10 ed25519 implementation lifted from supercop to avoid pulling in another dependency, but the intention is to provide a standalone executable that does ed25519 vanity keypair generation. While it does use the API in an odd way, this is intentional as it's already doing something extremely exotic and unusual with respect to key generation and the lib is not meant to be used for signing.*
+    * FLD ECC AVX2 (Armando Faz-Hern\'{a}ndez and Julio L\'{o}pez and Ricardo Dahab) [src/sign255.c#L391](https://github.com/armfazh/fld-ecc-vec/blob/master/src/sign255.c#L391)
 * C++
-    * amber (Pelayo Bernedo) [github.com/bernedogit/amber/blob/master/src/group25519.cpp#L1661](https://github.com/bernedogit/amber/blob/master/src/group25519.cpp#L1661)
+    * amber (Pelayo Bernedo) [src/group25519.cpp#L1661](https://github.com/bernedogit/amber/blob/master/src/group25519.cpp#L1661)
     * Ed25519 (ArduinoLibs) [https://rweather.github.io/arduinolibs/classEd25519.html#a36ecf67b4c5d2d39a31888f56af1f8a5](https://rweather.github.io/arduinolibs/classEd25519.html#a36ecf67b4c5d2d39a31888f56af1f8a5)
 * C#
-    * ed25519 (Hans Wolff) [github.com/hanswolff/ed25519/blob/master/Ed25519/Ed25519.cs#L146](https://github.com/hanswolff/ed25519/blob/master/Ed25519/Ed25519.cs#L146)
-    * Ed25519 (CryptoManiac) [github.com/CryptoManiac/Ed25519/blob/972829ac688847895d5105f19ca1e5777131b421/Chaos.NaCl/Internal/Ed25519Ref10/keypair.cs#L7](https://github.com/CryptoManiac/Ed25519/blob/972829ac688847895d5105f19ca1e5777131b421/Chaos.NaCl/Internal/Ed25519Ref10/keypair.cs#L7)
-    * SommerEngineering/Ed25519 (Thorsten Sommer) [github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80](https://github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80)
+    * ed25519 (Hans Wolff) [Ed25519/Ed25519.cs#L146](https://github.com/hanswolff/ed25519/blob/master/Ed25519/Ed25519.cs#L146)
+    * Ed25519 (CryptoManiac) [Chaos.NaCl/Internal/Ed25519Ref10/keypair.cs#L7](https://github.com/CryptoManiac/Ed25519/blob/972829ac688847895d5105f19ca1e5777131b421/Chaos.NaCl/Internal/Ed25519Ref10/keypair.cs#L7)
+    * SommerEngineering/Ed25519 (Thorsten Sommer) [Ed25519/Signer.cs#L80](https://github.com/SommerEngineering/Ed25519/blob/master/Ed25519/Signer.cs#L80)
 * Dart
-    * ed25519_dart (Oleksii Semeshchuk) [github.com/semolex/ed25519_dart/blob/master/lib/src/ed25519_dart_base.dart#L200](https://github.com/semolex/ed25519_dart/blob/master/lib/src/ed25519_dart_base.dart#L200)
-    * riclava_ed25519 (riclava) [github.com/riclava/ed25519/blob/master/lib/ed25519.dart#L125](https://github.com/riclava/ed25519/blob/master/lib/ed25519.dart#L125)
+    * ed25519_dart (Oleksii Semeshchuk) [lib/src/ed25519_dart_base.dart#L200](https://github.com/semolex/ed25519_dart/blob/master/lib/src/ed25519_dart_base.dart#L200)
+    * riclava_ed25519 (riclava) [lib/ed25519.dart#L125](https://github.com/riclava/ed25519/blob/master/lib/ed25519.dart#L125)
 * Haskell
-    * hs-scraps (Vincent Hanquez) [github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115](https://github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115)
-    * gen-ed25-keypair [github.com/awakesecurity/gen-ed25-keypair](https://github.com/awakesecurity/gen-ed25-keypair)
+    * hs-scraps (Vincent Hanquez) [Crypto/Signature/Ed25519.hs#L115](https://github.com/vincenthz/hs-scraps/blob/master/Crypto/Signature/Ed25519.hs#L115)
+    * gen-ed25-keypair [awakesecurity/gen-ed25-keypair](https://github.com/awakesecurity/gen-ed25-keypair)
 * Java
-    * ed25519-java (k3d3) [github.com/k3d3/ed25519-java/blob/master/ed25519.java#L144](https://github.com/k3d3/ed25519-java/blob/master/ed25519.java#L144)
-    * ed25519 (Bjorn Arnelid) [github.com/BjornArnelid/ed25519/blob/master/src/ed25519/application/Ed25519.java#L32](https://github.com/BjornArnelid/ed25519/blob/master/src/ed25519/application/Ed25519.java#L32)
-    * Punisher.NaCl (Arpan Jati) [github.com/arpanj/Punisher.NaCl/blob/c9619ca3028b90d0556c0473e4eba1d429a3744c/Punisher.NaCl/src/Punisher/NaCl/Ed25519Operations.java#L72](https://github.com/arpanj/Punisher.NaCl/blob/c9619ca3028b90d0556c0473e4eba1d429a3744c/Punisher.NaCl/src/Punisher/NaCl/Ed25519Operations.java#L72)
-    * ED25519 (Mick Michalski) [github.com/michami/ED25519/blob/master/ED25519.java#L60](https://github.com/michami/ED25519/blob/master/ED25519.java#L60)
-    * vRallev/ECC-25519 (Ralf Wondratschek) [github.com/vRallev/ECC-25519/blob/master/ECC-25519-Java/src/main/java/net/vrallev/java/ecc/Ecc25519Helper.java#L102](https://github.com/vRallev/ECC-25519/blob/master/ECC-25519-Java/src/main/java/net/vrallev/java/ecc/Ecc25519Helper.java#L102)
+    * ed25519-java (k3d3) [ed25519.java#L144](https://github.com/k3d3/ed25519-java/blob/master/ed25519.java#L144)
+    * ed25519 (Bjorn Arnelid) [src/ed25519/application/Ed25519.java#L32](https://github.com/BjornArnelid/ed25519/blob/master/src/ed25519/application/Ed25519.java#L32)
+    * Punisher.NaCl (Arpan Jati) [Punisher.NaCl/src/Punisher/NaCl/Ed25519Operations.java#L72](https://github.com/arpanj/Punisher.NaCl/blob/c9619ca3028b90d0556c0473e4eba1d429a3744c/Punisher.NaCl/src/Punisher/NaCl/Ed25519Operations.java#L72)
+    * ED25519 (Mick Michalski) [ED25519.java#L60](https://github.com/michami/ED25519/blob/master/ED25519.java#L60)
+    * vRallev/ECC-25519 (Ralf Wondratschek) [ECC-25519-Java/src/main/java/net/vrallev/java/ecc/Ecc25519Helper.java#L102](https://github.com/vRallev/ECC-25519/blob/master/ECC-25519-Java/src/main/java/net/vrallev/java/ecc/Ecc25519Helper.java#L102)
 * JavaScript / TypeScript
-    * supercop.js (1p6 Flynx) [github.com/1p6/supercop.js/blob/master/index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
-    * substack/ed25519-supercop (James Halliday) [github.com/substack/ed25519-supercop/blob/master/index.js#L3](https://github.com/substack/ed25519-supercop/blob/master/index.js#L3)
-    * KinomaJS [github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92](https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92) (*Public key is optional*)
-    * mipher (Marco Paland) [github.com/mpaland/mipher/blob/master/src/x25519.ts#L936](https://github.com/mpaland/mipher/blob/master/src/x25519.ts#L936)
+    * supercop.js (1p6 Flynx) [index.js#L29](https://github.com/1p6/supercop.js/blob/master/index.js#L29)
+    * substack/ed25519-supercop (James Halliday) [index.js#L3](https://github.com/substack/ed25519-supercop/blob/master/index.js#L3)
+    * KinomaJS [xs6/extensions/crypt/crypt_ed25519.js#L92](https://github.com/Kinoma/kinomajs/blob/701879d37e7fe5001420e0053cd60df6b91e4553/xs6/extensions/crypt/crypt_ed25519.js#L92) (*Public key is optional*)
+    * mipher (Marco Paland) [src/x25519.ts#L936](https://github.com/mpaland/mipher/blob/master/src/x25519.ts#L936)
 * Python
     * ed25519.py (Ed25519 authors) [https://ed25519.cr.yp.to/python/ed25519.py](https://ed25519.cr.yp.to/python/ed25519.py)
-    * ed25519 (Python Cryptographic Authority) [github.com/pyca/ed25519/blob/main/ed25519.py#L243](https://github.com/pyca/ed25519/blob/main/ed25519.py#L243)
+    * ed25519 (Python Cryptographic Authority) [ed25519.py#L243](https://github.com/pyca/ed25519/blob/main/ed25519.py#L243)
 (*authors mention it’s unsafe against side channels anyway*)
-    * python-pure25519 (Brian Warner) [github.com/warner/python-pure25519/blob/master/pure25519/eddsa.py#L21](https://github.com/warner/python-pure25519/blob/master/pure25519/eddsa.py#L21)
-    * nmed25519 (naturalmessage) [github.com/naturalmessage/nmed25519/blob/master/nmed25519.py#L150](https://github.com/naturalmessage/nmed25519/blob/master/nmed25519.py#L150)
+    * python-pure25519 (Brian Warner) [pure25519/eddsa.py#L21](https://github.com/warner/python-pure25519/blob/master/pure25519/eddsa.py#L21)
+    * nmed25519 (naturalmessage) [nmed25519.py#L150](https://github.com/naturalmessage/nmed25519/blob/master/nmed25519.py#L150)
     * ed25519.py (Shiho Midorikawa) [gist.github.com/elliptic-shiho/f41fd75cc30646a61d7ad63043fdd56e#file-ed25519-py-L77](https://gist.github.com/elliptic-shiho/f41fd75cc30646a61d7ad63043fdd56e#file-ed25519-py-L77)
-    * bindings for ed25519-dalek: py-ed25519-bindings [github.com/polkascan/py-ed25519-bindings/blob/master/src/lib.rs#L111](https://github.com/polkascan/py-ed25519-bindings/blob/master/src/lib.rs#L111)
-    * py_ssh_keygen_ed25519 (Péter Szabó) [github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128](https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128) (*Public key is optional*)
-* Clojure: ed25519 (Kevin Downey) [github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168](https://github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168)
-* Crystal: monocypher.cr [github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39](https://github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39)
-* CUDA: ChorusOne/solanity [github.com/ChorusOne/solanity/blob/master/src/cuda-ecc-ed25519/sign.cu#L10](https://github.com/ChorusOne/solanity/blob/master/src/cuda-ecc-ed25519/sign.cu#L10)
-* Elixir: mwmiller/ed25519_ex (Matt Miller) [github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146](https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146)(*Public key is optional. Per author's comment: if only the secret key is provided, the public key will be derived therefrom. This adds significant overhead*)
-* Lua: LuaMonocypher [github.com/philanc/luamonocypher/blob/main/src/luamonocypher.c#L268](https://github.com/philanc/luamonocypher/blob/main/src/luamonocypher.c#L268)
-* Nim: niv/ed25519.nim (Bernhard Stöckner) [github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26](https://github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26)
+    * bindings for ed25519-dalek: py-ed25519-bindings [src/lib.rs#L111](https://github.com/polkascan/py-ed25519-bindings/blob/master/src/lib.rs#L111)
+    * py_ssh_keygen_ed25519 (Péter Szabó) [ed25519_compact.py#L128](https://github.com/pts/py_ssh_keygen_ed25519/blob/master/ed25519_compact.py#L128) (*Public key is optional*)
+* Clojure: ed25519 (Kevin Downey) [src/ed25519/core.clj#L168](https://github.com/hiredman/ed25519/blob/master/src/ed25519/core.clj#L168)
+* Crystal: monocypher.cr [src/monocypher.cr#L39](https://github.com/konovod/monocypher.cr/blob/master/src/monocypher.cr#L39)
+* CUDA: ChorusOne/solanity [src/cuda-ecc-ed25519/sign.cu#L10](https://github.com/ChorusOne/solanity/blob/master/src/cuda-ecc-ed25519/sign.cu#L10)
+* Elixir: mwmiller/ed25519_ex (Matt Miller) [lib/ed25519.ex#L146](https://github.com/mwmiller/ed25519_ex/blob/master/lib/ed25519.ex#L146)(*Public key is optional. Per author's comment: if only the secret key is provided, the public key will be derived therefrom. This adds significant overhead*)
+* Lua: LuaMonocypher [src/luamonocypher.c#L268](https://github.com/philanc/luamonocypher/blob/main/src/luamonocypher.c#L268)
+* Nim: niv/ed25519.nim (Bernhard Stöckner) [ed25519.nim#L26](https://github.com/niv/ed25519.nim/blob/master/ed25519.nim#L26)
 * Perl: Crypt::Ed25519 (Marc Lehmann) [https://metacpan.org/release/MLEHMANN/Crypt-Ed25519-0.9/view/Ed25519.pm#$signature-=-Crypt::Ed25519::sign-$message,-$public_key,-$private_key](https://metacpan.org/release/MLEHMANN/Crypt-Ed25519-0.9/view/Ed25519.pm#$signature-=-Crypt::Ed25519::sign-$message,-$public_key,-$private_key)
-* PHP (C wrapper): php-ed25519-ext [github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93](https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93)
-* Swift: ed25519swift (pebble8888) [github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120](https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120)
+* PHP (C wrapper): php-ed25519-ext [ed25519-ext.c#L93](https://github.com/encedo/php-ed25519-ext/blob/master/ed25519-ext.c#L93)
+* Swift: ed25519swift (pebble8888) [Ed25519ref/ed25519s.swift#L120](https://github.com/pebble8888/ed25519swift/blob/master/Ed25519ref/ed25519s.swift#L120)
 
 ## Fixed libraries
 * C
@@ -126,9 +126,3 @@ Libraries originally reported as vulnerable, but removed from the list based on 
 
 * Go: threshold-ed25519 — Threshold Signatures using Ed25519
 [https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161](https://gitlab.com/unit410/threshold-ed25519/-/blob/main/pkg/ed25519.go#L161) -> see report [github.com/MystenLabs/ed25519-unsafe-libs/pull/9](https://github.com/MystenLabs/ed25519-unsafe-libs/pull/9) *(reported on Oct 27, 2022 by nitronit)*
-
-## Unaffected libraries
-
-The libraries were always safe against the attack.
-
-* JavaScript / TypeScript: noble-curves [src/abstract/edwards.ts#L445](https://github.com/paulmillr/noble-curves/blob/c19373a0b5865f481d2a188c1a44d0defa705c2e/src/abstract/edwards.ts#L445)
